@@ -3,17 +3,17 @@ import time
 import threading
 import random
 
-# List of messages to display
+# list of messages to display
 messages = ["Happy New Year!", "Surprise!", "Happy Weekend!", "Blastoff!"]
 
-# List of background colors
+# list of background colors
 background_colors = ["lightblue", "lightgreen", "lightcoral", "lightyellow"]
 
-# Initialize message and background color indices
+# initialize message and background color indices
 message_index = 0
 color_index = 0
 
-# Function to update and display the next message and background color
+# function to update and display the next message and background color
 def update_message_and_color():
     global message_index, color_index
 
@@ -38,18 +38,18 @@ def start_countdown():
     countdown_thread = threading.Thread(target=countdown)
     countdown_thread.start()
 
-# Create the main application window
+# create the main application window
 app = tk.Tk()
 app.title("Countdown Timer")
 app.geometry("300x200")
 
-# Create a label for countdown display with no border
+# create a label for countdown display with no border
 countdown_label = tk.Label(app, text="", font=("Arial", 24), bd=0)
 countdown_label.pack(pady=0)
 
-# Create a "Start Countdown" button
+# create a "Start Countdown" button
 start_button = tk.Button(app, text="Start Countdown", command=start_countdown)
 start_button.pack()
 
-# Start the GUI event loop
+# start the GUI event loop
 app.mainloop()
