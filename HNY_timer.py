@@ -3,17 +3,17 @@ import time
 import threading
 import random
 
-# list of messages to display
+#list of messages to display
 messages = ["Happy New Year!", "Surprise!", "Happy Weekend!", "Blastoff!"]
 
-# list of background colors
+#list of background colours (US spelling = standard)
 background_colors = ["lightblue", "lightgreen", "lightcoral", "lightyellow"]
 
-# initialize message and background color indices
+# initialise message & background colour indices
 message_index = 0
 color_index = 0
 
-# function to update and display the next message and background color
+# function to update and display the next message and background colour
 def update_message_and_color():
     global message_index, color_index
 
